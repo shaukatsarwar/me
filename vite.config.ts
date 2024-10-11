@@ -9,3 +9,4 @@ export default defineConfig({
     outDir: 'dist', // Ensure this matches your deployment setup
   },
 });
+
