@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [react()],
   base: '/me/',
   build: {
-    outDir: 'build', // Ensure this matches your deployment setup
+    outDir: 'dist', // Ensure this matches your deployment setup
   },
 });
