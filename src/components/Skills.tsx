@@ -1,7 +1,20 @@
 import React from 'react';
-import { Code, Cloud, Database, Shield, Briefcase, Cpu } from 'lucide-react';
+import { Code, Cloud, Database, Shield, Briefcase, Cpu, Brain } from 'lucide-react';
 
 const skillCategories = [
+  {
+    title: "Artificial Intelligence",
+    icon: Brain, // Use an appropriate icon for AI
+    skills: [
+      "Generative AI Solutions: AI assistants, content creation, and more.",
+      "NLP & Computer Vision: Implement chatbots, image recognition, or language models.",
+      "Custom Machine Learning Models: Scalable models using AWS SageMaker and Bedrock.",
+      "Full Lifecycle Support: From design to deployment, ensuring efficiency and security.",
+      "2 years of experience in AI, ML, and cloud platforms like AWS and Azure.",
+      "Expertise in Generative AI, Machine Learning, and Computer Vision solutions.",
+      "Timely delivery with a focus on quality and clear communication."
+    ]
+  },
   {
     title: "Cloud Platforms",
     icon: Cloud,
