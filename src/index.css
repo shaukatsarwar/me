@@ -26,4 +26,9 @@ html {
   .hover\:bg-spotify-green-dark:hover {
     background-color: #1ed760;
   }
+  .pills-spotify-green {
+    background-color: rgb(29, 185, 84);
+    color: white;  
+  }
+ 
 }
