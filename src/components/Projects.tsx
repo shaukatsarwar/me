@@ -199,6 +199,7 @@ const Projects: React.FC = () => {
     contentRefs.current.forEach((ref, index) => {
       if (ref) {
         ref.style.height = expandedProjectIndex === index ? `${ref.scrollHeight}px` : '0px';
+        ref.style.overflow = 'hidden'; // Ensure content doesn't overflow
       }
     });
   }, [expandedProjectIndex]);
@@ -216,7 +217,7 @@ const Projects: React.FC = () => {
               <p className="text-gray-400 mb-4">{project.company}</p>
               <div
                 ref={(el) => (contentRefs.current[index] = el)}
-                className={`expandable-content ${expandedProjectIndex === index ? 'expanded' : 'collapsed'}`}
+                className={`transition-all duration-300 ease-in-out ${expandedProjectIndex === index ? 'expanded' : 'collapsed'}`}
               >
                 <div className="mb-4">
                   <h4 className="font-semibold text-spotify-green">Overview:</h4>
