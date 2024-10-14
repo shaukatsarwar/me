@@ -243,7 +243,7 @@ const Projects: React.FC = () => {
                   <h4 className="font-semibold text-spotify-green">Technologies:</h4>
                   <ul className="flex flex-wrap gap-2 mt-2">
                     {project.technologies.map((tech, techIndex) => (
-                      <li key={techIndex} className="bg-[#1DB954] text-black px-3 py-1 rounded-full text-sm">
+                      <li key={techIndex} className="bg-[#4353ff] text-white px-3 py-1 rounded-full text-sm">
                         {tech}
                       </li>
                     ))}
