@@ -25,17 +25,23 @@ html {
     color: #1DB954;
   }
   .bg-spotify-green {
-    background: linear-gradient(90deg, #4353ff, #4353ff);
+    background: linear-gradient(90deg, #1DB954, #1DB954);
   }
   .hover\:bg-spotify-green-dark:hover {
-    background: linear-gradient(90deg, #4353ff, #4353ff);
+    background: linear-gradient(90deg, #1DB954, #1DB954);
   }
   .pills-spotify-green {
-    background: linear-gradient(90deg, #4353ff, #4353ff);
+    background: linear-gradient(90deg, #1DB954, #1DB954);
     color: white;  
   }
  section{
   background-color: black !important;
+ }
+ .blackWithBorder
+ {
+  background-color: #282828;
+  /*border-color: #1DB954;
+  border-width: 2px;*/
  }
 }
 

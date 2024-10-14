@@ -198,7 +198,7 @@ const Projects: React.FC = () => {
   useEffect(() => {
     contentRefs.current.forEach((ref, index) => {
       if (ref) {
-        ref.style.height = expandedProjectIndex === index ? `${ref.scrollHeight}px` : '0px';
+        ref.style.height = expandedProjectIndex === index ? `${ref.scrollHeight}px` : '90px'; // Increase height to show one more line
         ref.style.overflow = 'hidden'; // Ensure content doesn't overflow
       }
     });
@@ -210,47 +210,66 @@ const Projects: React.FC = () => {
         <h2 className="text-3xl font-bold mb-12 text-center text-spotify-green">Featured Projects</h2>
         <div className="space-y-12">
           {projects.map((project, index) => (
-            <div key={index} className="bg-[#282828] p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold mb-2 text-white cursor-pointer" onClick={() => toggleProjectDetails(index)}>
-                {project.title}
-              </h3>
-              <p className="text-gray-400 mb-4">{project.company}</p>
+            <React.Fragment key={index}>
               <div
-                ref={(el) => (contentRefs.current[index] = el)}
-                className={`transition-all duration-300 ease-in-out ${expandedProjectIndex === index ? 'expanded' : 'collapsed'}`}
+                className="blackWithBorder p-6 rounded-lg shadow-md group cursor-pointer"
+                onClick={() => toggleProjectDetails(index)}
               >
-                <div className="mb-4">
-                  <h4 className="font-semibold text-spotify-green">Overview:</h4>
-                  <p className="text-gray-300">{project.overview}</p>
-                </div>
-                <div className="mb-4">
-                  <h4 className="font-semibold text-spotify-green">Solution:</h4>
-                  <ul className="text-gray-300 list-disc pl-5">
-                    {project.solution.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div className="mb-4">
-                  <h4 className="font-semibold text-spotify-green">Results:</h4>
-                  <ul className="text-gray-300 list-disc pl-5">
-                    {project.results.map((item, i) => (
-                      <li key={i}>{item}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-spotify-green">Technologies:</h4>
-                  <ul className="flex flex-wrap gap-2 mt-2">
-                    {project.technologies.map((tech, techIndex) => (
-                      <li key={techIndex} className="bg-[#4353ff] text-white px-3 py-1 rounded-full text-sm">
-                        {tech}
-                      </li>
-                    ))}
-                  </ul>
+                <h3 className="text-2xl font-semibold mb-2 text-white">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 mb-4">{project.company}</p>
+                <div
+                  ref={(el) => (contentRefs.current[index] = el)}
+                  className={`transition-all duration-300 ease-in-out ${expandedProjectIndex === index ? 'expanded' : 'collapsed'}`}
+                  style={{
+                    position: 'relative',
+                    maxHeight: expandedProjectIndex === index ? 'none' : '90px', // Increase max height for collapsed state
+                    overflow: 'hidden',
+                  }}
+                >
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-spotify-green">Overview:</h4>
+                    <p className="text-gray-300">{project.overview}</p>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-spotify-green">Solution:</h4>
+                    <ul className="text-gray-300 list-disc pl-5">
+                      {project.solution.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-spotify-green">Results:</h4>
+                    <ul className="text-gray-300 list-disc pl-5">
+                      {project.results.map((item, i) => (
+                        <li key={i}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-spotify-green">Technologies:</h4>
+                    <ul className="flex flex-wrap gap-2 mt-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <li key={techIndex} className="bg-[#4353ff] text-white px-3 py-1 rounded-full text-sm">
+                          {tech}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  {expandedProjectIndex !== index && (
+                    <div
+                      className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-[#121212] to-transparent"
+                      style={{ pointerEvents: 'none' }}
+                    />
+                  )}
                 </div>
               </div>
-            </div>
+              {index < projects.length - 1 && (
+                <div className="h-1 bg-gradient-to-r from-black via-[#4353ff] to-black my-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              )}
+            </React.Fragment>
           ))}
         </div>
       </div>

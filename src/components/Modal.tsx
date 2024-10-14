@@ -48,7 +48,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, title, icon: Icon, descr
               <h3 className="font-bold text-white mb-3">{key}</h3>
               <ul className="flex flex-wrap gap-2">
                 {details[key].map((value, subIndex) => (
-                  <li key={subIndex} className="bg-[#4353ff] text-white px-3 py-1 rounded-full text-sm">
+                  <li key={subIndex} className="bg-[#1DB954] text-white px-3 py-1 rounded-full text-sm">
                     {value}
                   </li>
                 ))}

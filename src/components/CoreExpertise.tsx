@@ -153,7 +153,7 @@ const CoreExpertise: React.FC = () => {
         <h2 className="text-3xl font-bold mb-12 text-center text-spotify-green">Core Expertise</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {expertiseCategories.map((category, index) => (
-            <div key={index} className="bg-[#282828] p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+            <div key={index} className="bg-black p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow blackWithBorder">
               <category.icon className="w-12 h-12 text-spotify-green mb-4" />
               <h3 className="text-xl font-semibold mb-4 text-white">{category.title}</h3>
               <p className="text-gray-300 mb-4">{category.description}</p>
