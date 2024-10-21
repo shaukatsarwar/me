@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h2 className="text-2xl font-bold text-spotify-green">Shaukat Sarwar</h2>
-            <p>AI Architect and Cloud Specialist</p>
+            <p>AI Enthusiast and Cloud Specialist</p>
           </div>
           <div className="flex space-x-4">
             <a href="https://linkedin.com/in/shaukatsarwar" target="_blank" rel="noopener noreferrer" className="hover:text-spotify-green">

@@ -7,7 +7,8 @@ import {
   Layers, Workflow, Cpu,
   LayoutGrid, Shield, Key, Network, HardDrive, BarChart,
   CloudCog, Box, Search, Clock, Container,
-  Trello
+  Trello,
+  CloudIcon
 } from 'lucide-react';
 
 const serviceIcons = {
@@ -27,24 +28,18 @@ const serviceIcons = {
   // Cloud and DevOps
   "Microsoft Azure": Cloud,
   "App Services": LayoutGrid,
-  "Azure AI Services": Bot,
   "Application Gateway": Shield,
-  "WAF": Shield,
   "KeyVault": Key,
   "VNET": Network,
   "Load Balancer": HardDrive,
-  "Storage": Database,
   "App Insights": BarChart,
   "AWS": CloudCog,
   "Elastic Beanstalk": Box,
   "EC2": Server,
   "S3": Database,
   "OpenSearch": Search,
-  "VPC": Network,
   "Route 53": Globe,
   "CloudWatch": Clock,
-  "Elastic Cache": Database,
-  "RDB": Database,
 
   // Leadership & Team Management
   "Agile": Workflow,
@@ -52,8 +47,15 @@ const serviceIcons = {
   "Jira": Trello,
 
   // Default icon for unmatched services
-  "default": Container
-};
+  "default": Container,
+
+  // Commented out duplicate icons
+  // "Azure AI Services": Bot,         // Duplicate of "Azure OpenAI"
+  // "WAF": Shield,                    // Duplicate of "Application Gateway"
+  // "Storage": Database,              // Duplicate of "AWS Bedrock" / "S3"
+  // "Elastic Cache": Database,        // Duplicate of "AWS Bedrock" / "S3"
+  // "RDB": Database,                  // Duplicate of "AWS Bedrock" / "S3"
+  };
 
 const expertiseCategories = [
   {
@@ -66,7 +68,7 @@ const expertiseCategories = [
         "Azure OpenAI", "Computer Vision", "AWS Bedrock", "AWS SageMaker", "Amazon Q", "Deployment of AI-powered systems"
       ]
     },
-    detailsIcons: [serviceIcons['Azure AI Services'], 
+    detailsIcons: [
                     serviceIcons['Computer Vision'],
                     serviceIcons['AWS Bedrock'], serviceIcons['AWS SageMaker'],
                     serviceIcons['Amazon Q'], serviceIcons['Deployment of AI-powered systems']
@@ -88,7 +90,7 @@ const expertiseCategories = [
   {
     title: "Cloud and DevOps",
     icon: Cloud,
-    description: "AWS cloud consultation services, expertise in Docker, Kubernetes, EKS, and CI/CD pipelines.",
+    description: "Expert in AWS and Microsoft Azure technologies, with proficiency in Docker, Kubernetes, EKS, and CI/CD pipelines, enabling efficient and scalable cloud architectures.",
     link: "#cloud-projects",
     details: {
       "Microsoft Azure": [
@@ -98,34 +100,42 @@ const expertiseCategories = [
         "Amazon Bedrock", "SageMaker", "Q", "Elastic Beanstalk", "EC2", "S3", "OpenSearch", "VPC", "Route 53", "CloudWatch", "Elastic Cache", "RDB"
       ]
     },
-    detailsIcons: [serviceIcons['Azure AI Services'], serviceIcons['Microsoft Azure'],
-                    serviceIcons['App Services'], serviceIcons['Azure AI Services'],
-                    serviceIcons['Application Gateway'], serviceIcons.WAF,
+    detailsIcons: [ //serviceIcons['Azure AI Services'], 
+                    serviceIcons['Microsoft Azure'],
+                    serviceIcons['App Services'], 
+                    //serviceIcons['Azure AI Services'],
+                    serviceIcons['Application Gateway'], 
+                    //serviceIcons.WAF,
                     serviceIcons.KeyVault, serviceIcons.VNET, serviceIcons['Load Balancer'], 
-                    serviceIcons['App Insights'], serviceIcons.Storage,
+                    serviceIcons['App Insights'], 
+                    //serviceIcons.Storage,
                     serviceIcons.AWS, serviceIcons['AWS Bedrock'], serviceIcons['AWS SageMaker'],
                     serviceIcons['Amazon Q'], serviceIcons['Elastic Beanstalk'], serviceIcons.EC2,
-                    serviceIcons.S3, serviceIcons.OpenSearch, serviceIcons.VPC, serviceIcons['Route 53'],
-                    serviceIcons.CloudWatch, serviceIcons['Elastic Cache'], serviceIcons.RDB
+                    serviceIcons.S3, serviceIcons.OpenSearch, 
+                    //serviceIcons.VPC, 
+                    serviceIcons['Route 53'],
+                    serviceIcons.CloudWatch
+                    //, serviceIcons['Elastic Cache'], serviceIcons.RDB
                   
                   ]
   },
   {
-    title: "Telecom Industry Experience",
-    icon: Radio,
-    description: "Developed asset tracking systems and collaborated with field engineers for network optimization.",
-    link: "#telecom-projects",
+    title: "SaaS Expertise",
+    icon: CloudIcon,
+    description: "Designed and deployed scalable SaaS applications focusing on performance, cost optimization, and cloud-native technologies. Leveraged agile methodologies to iterate rapidly and meet client needs while maintaining a strong emphasis on user experience.",
+    link: "#cloud-expertise",
     details: {
-      "Details about telecom industry experience": [
-        "Domain Driven Design (DDD)", "Clean Architecture", "Command Query Responsibility Segregation (CQRS)"
+      "Details about Cloud Architecture expertise": [
+        "Hybrid Cloud Solutions", "Cost Optimization", "Security and Compliance"
       ]
     },
-    detailsIcons: [serviceIcons.AWS, serviceIcons['Microsoft Azure']]
+    detailsIcons: [serviceIcons.AWS, serviceIcons['Microsoft Azure']//, serviceIcons.RDB
+                  ]
   },
   {
     title: "Leadership & Team Management",
     icon: Users,
-    description: "Managed a 5-year AI-experienced team, mentored junior developers, and scaled engineering teams.",
+    description: "Managed a team of 20 developers, fostering a collaborative environment through mentorship and continuous learning, while scaling engineering teams to meet project demands and deliver high-quality software solutions.",
     link: "#leadership",
     details: {
       "Project Management": [

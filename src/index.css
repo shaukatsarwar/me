@@ -24,6 +24,10 @@ html {
   {
     color: #1DB954;
   }
+  .spotify-green
+  {
+    background: linear-gradient(90deg, #1DB954, #1DB954);
+  }
   .bg-spotify-green {
     background: linear-gradient(90deg, #1DB954, #1DB954);
   }
@@ -43,5 +47,14 @@ html {
   /*border-color: #1DB954;
   border-width: 2px;*/
  }
+
+ .glow-effect {
+  transition: transform 300ms, box-shadow 300ms;
+}
+
+.glow-effect:hover {
+  transform: scale(1.00);
+  box-shadow: 0 0 20px rgb(255, 255, 255); /* Adjust the color and intensity as needed */
+}
 }
 

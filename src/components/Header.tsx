@@ -12,8 +12,10 @@ const Header: React.FC = () => {
         <nav className="hidden md:block">
           <ul className="flex space-x-6">
             <li><a href="#expertise" className="text-gray-300 hover:topMenuGreen">Expertise</a></li>
+            <li><a href="#achievements" className="text-gray-300 hover:topMenuGreen">Achievements</a></li>
             <li><a href="#projects" className="text-gray-300 hover:topMenuGreen">Projects</a></li>
             <li><a href="#skills" className="text-gray-300 hover:topMenuGreen">Skills</a></li>
+            
             <li><a href="#experience" className="text-gray-300 hover:topMenuGreen">Experience</a></li>
             {
             //<li><a href="#certifications" className="text-gray-300 hover:text-spotify-green">Certifications</a></li>

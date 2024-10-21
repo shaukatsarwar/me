@@ -19,7 +19,7 @@ const projects = [
       "Increased asset lifespan by an average of 15% through timely interventions and optimized usage patterns.",
       "Achieved a 99.99% uptime for the platform, ensuring consistent access to critical asset data."
     ],
-    "technologies": ["AWS (EC2, S3, Lambda)", "TensorFlow", "Python", "Kubernetes", "Docker", "Redis", "PostgreSQL"]
+    "technologies": ["AWS (EC2, S3)", "TensorFlow", "Python", "Kubernetes", "Docker", "Redis", "MySQL", "Amazon Bedrock"]
   },
   {
     "title": "Safety Gear Detection System",
@@ -39,35 +39,72 @@ const projects = [
       "Decreased manual safety checks by 60%, allowing safety officers to focus on more strategic safety initiatives.",
       "Generated comprehensive safety reports, facilitating data-driven decision-making for safety protocols and training programs."
     ],
-    "technologies": ["Azure AI", "PyTorch", "OpenCV", "Edge Computing (NVIDIA Jetson)", "React Native (for mobile alerts)", "Power BI (for analytics dashboard)"]
+    "technologies": ["Azure AI", "PyTorch", "OpenCV", "Edge Computing", "Analytics"]
   },
   {
-    "title": "Telecom Network Optimization",
-    "company": "Global Telecom Provider",
-    "overview": "Optimized network performance and asset utilization for a major telecom provider serving over 50 million customers. The project aimed to enhance network reliability, reduce operational costs, and improve customer satisfaction in an increasingly competitive market.",
+    "title": "Comprehensive Asset Management Module",
+    "company": "Fieldforce Inc.",
+    "overview": "Developed a cloud-based asset management module that enables industrial clients to monitor, manage, and optimize their assets in real-time. The module includes customizable dashboards and reports for asset performance, ensuring timely interventions and lifecycle management.",
     "solution": [
-      "Developed a sophisticated AI model for predictive maintenance, leveraging machine learning algorithms to analyze vast amounts of network data and identify potential failures before they occur.",
-      "Created a dynamic network load balancing system that uses real-time data and historical patterns to optimize traffic distribution across the network.",
-      "Integrated the AI solutions seamlessly with existing telecom infrastructure, ensuring minimal disruption to ongoing operations.",
-      "Implemented a scalable data pipeline using Apache Spark to process and analyze terabytes of network data in near real-time.",
-      "Utilized AWS SageMaker for model training and deployment, enabling rapid iteration and improvement of AI models."
+      "Implemented a microservices architecture to enhance scalability and performance of asset management operations.",
+      "Developed real-time asset monitoring using AWS services like EC2 and S3, allowing clients to track asset health and status across multiple locations.",
+      "Integrated Redis for caching frequently accessed data, improving response times for dashboard updates.",
+      "Designed customizable dashboards, allowing users to create widgets tailored to specific assets and regions.",
+      "Provided export functionality for location-wise and category-wise asset data, leveraging OpenSearch for storing and retrieving asset metadata."
     ],
     "results": [
-      "Improved network reliability by 20%, significantly enhancing customer experience and reducing churn rate.",
-      "Reduced operational costs by 15% through more efficient resource allocation and preventive maintenance.",
-      "Increased network capacity utilization by 25% without additional hardware investments.",
-      "Decreased average problem resolution time by 30% due to early detection and precise diagnostics.",
-      "Enabled the launch of new 5G services with 99.999% reliability, positioning the company as a market leader."
+      "Improved asset visibility and operational efficiency by 40%, enabling better decision-making.",
+      "Reduced asset downtime by 20% through proactive monitoring and timely maintenance alerts.",
+      "Increased user engagement with customizable dashboards, allowing for greater operational flexibility.",
+      "Enhanced data accessibility and export capabilities, leading to a 30% improvement in reporting efficiency."
     ],
-    "technologies": ["AWS SageMaker", "Scala", "Apache Spark", "5G Technologies", "Kafka", "Elasticsearch", "Grafana (for visualizations)"]
+    "technologies": ["AWS (EC2, S3)", "TypeScript", "Redis", "React", "OpenSearch"]
   },
+  {
+    "title": "Fieldforce Management and Scheduling Module",
+    "company": "Fieldforce Inc.",
+    "overview": "Developed an intelligent Fieldforce management module designed to optimize task scheduling and workforce deployment. This module leverages automation and data analytics to improve resource allocation, reduce operational costs, and enhance workforce efficiency.",
+    "solution": [
+      "Designed and deployed a scheduling engine using Node.js and MongoDB, ensuring efficient task allocation based on technician availability, location, and expertise.",
+      "Integrated real-time task tracking and status updates via mobile apps built with React Native.",
+      "Implemented AWS Lambda for serverless task processing, improving system scalability and cost efficiency.",
+      "Developed analytics dashboards to track workforce performance metrics and operational KPIs, enabling data-driven decision-making.",
+      "Utilized Redis for caching task and schedule data, reducing load times and improving user experience."
+    ],
+    "results": [
+      "Improved task completion rates by 25% due to optimized scheduling and resource allocation.",
+      "Reduced operational costs by 15% through automation of field force management processes.",
+      "Increased workforce productivity by 20%, minimizing travel time and maximizing task efficiency.",
+      "Enhanced visibility into workforce performance with real-time dashboards, improving management oversight."
+    ],
+    "technologies": ["TypeScript", "OpenSearch", "Redis", "C#", ".NET Core"]
+  },
+  {
+    "title": "Material Request and Inventory Management Module",
+    "company": "Fieldforce Inc.",
+    "overview": "Developed a material request and inventory management module to streamline the supply chain process for field teams. The system ensures seamless coordination between inventory management and on-field requirements, improving material availability and reducing project delays.",
+    "solution": [
+      "Created an intuitive interface for submitting material requests, built using React and Next.js.",
+      "Integrated with AWS RDS for managing inventory databases and ensuring real-time availability of materials across multiple locations.",
+      "Developed APIs for real-time synchronization of inventory data between warehouse and field teams using Node.js and Redis for data caching.",
+      "Implemented a reporting system for tracking material usage trends and forecasting future demand, enabling efficient resource planning.",
+      "Utilized OpenSearch for storing material request histories and generating analytics for optimization of inventory management."
+    ],
+    "results": [
+      "Reduced project delays by 30% through improved coordination between field teams and warehouses.",
+      "Enhanced material availability across multiple regions by 25%, optimizing resource allocation.",
+      "Improved reporting accuracy and forecasting capabilities, enabling better inventory management decisions.",
+      "Increased efficiency of material request approvals, reducing processing time by 20%."
+    ],
+    "technologies": ["Angular", "Typescript", "AWS RDS", "Redis", "OpenSearch", "EKS", "C#", ".NET Core"]
+  },    
   {
     "title": "SaaS Based Digital Signage Web Application",
     "company": "Intagleo",
     "overview": "Developed a cutting-edge Software-as-a-Service (SaaS) digital signage web application, revolutionizing out-of-home advertising by enabling dynamic content management and display across a network of electronic screens. This solution allowed businesses to deliver targeted messages to specific locations at precise times, enhancing engagement and advertising effectiveness.",
     "solution": [
       "Architected a robust, scalable platform leveraging Amazon Web Services (AWS) for hosting, ensuring high availability and performance.",
-      "Implemented a hybrid cloud storage solution, utilizing Azure S3 for content storage, providing redundancy and fast content delivery.",
+      "Implemented a hybrid cloud storage solution, utilizing S3 for content storage, providing redundancy and fast content delivery.",
       "Designed an intuitive main interface using Adobe Flex, offering a rich, responsive user experience for content management.",
       "Developed a powerful backend using RESTful WCF services in C# and .NET Framework 4.0, enabling seamless communication between the front-end and server.",
       "Utilized MySQL Server 5.1 for efficient data management and LLBLGen Pro for object-relational mapping, optimizing database operations.",
@@ -80,7 +117,7 @@ const projects = [
       "Increased client base by 150% within the first year of launch due to the platform's ease of use and powerful features.",
       "Facilitated a 30% increase in average viewer engagement time, as reported by client feedback and analytics."
     ],
-    "technologies": ["AWS", "Azure S3", "Adobe Flex", "C#", ".NET Framework 4.0", "MySQL Server 5.1", "LLBLGen Pro", "RESTful WCF", "SMIL"]
+    "technologies": ["AWS", "S3", "Adobe Flex", "C#", ".NET Framework 4.0", "MySQL Server 5.1", "LLBLGen Pro", "RESTful WCF", "SMIL"]
   },
   {
     "title": "SaaS Based Digital Signage Application for Cloud Computing",
@@ -212,7 +249,7 @@ const Projects: React.FC = () => {
           {projects.map((project, index) => (
             <React.Fragment key={index}>
               <div
-                className="blackWithBorder p-6 rounded-lg shadow-md group cursor-pointer"
+                className="blackWithBorder p-6 rounded-lg shadow-md group cursor-pointer glow-effect"
                 onClick={() => toggleProjectDetails(index)}
               >
                 <h3 className="text-2xl font-semibold mb-2 text-white">
@@ -252,7 +289,7 @@ const Projects: React.FC = () => {
                     <h4 className="font-semibold text-spotify-green">Technologies:</h4>
                     <ul className="flex flex-wrap gap-2 mt-2">
                       {project.technologies.map((tech, techIndex) => (
-                        <li key={techIndex} className="bg-[#4353ff] text-white px-3 py-1 rounded-full text-sm">
+                        <li key={techIndex} className="spotify-green text-white px-3 py-1 rounded-full text-sm">
                           {tech}
                         </li>
                       ))}

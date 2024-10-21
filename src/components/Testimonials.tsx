@@ -3,19 +3,14 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "John Doe",
-    position: "CTO, Tech Innovators Inc.",
-    content: "Shaukat's expertise in AI and cloud architecture transformed our asset management system. His leadership and technical skills are truly exceptional."
+    name: "Andrew Walsh",
+    position: "Director, Dynamax Technical Services Ltd",
+    content: "Shaukat`s provided excellent service with great organisation of projects and tasks. He had a great attention to detail to ensure that software projects where fully tested prior to release maintaining Excellent quality control. Working with Shaukat on a daily business, he provided excellent ideas and intelligent feedback on product design and architecture. His knowledge of software technologies and technics where vital to ensuring that Dynamax had a robust and feature rich product"
   },
   {
-    name: "Jane Smith",
-    position: "Project Manager, Global Telecom",
-    content: "Working with Shaukat on our network optimization project was a game-changer. His innovative approaches and deep understanding of telecom infrastructure led to significant improvements."
-  },
-  {
-    name: "Alex Johnson",
-    position: "CEO, AI Solutions Co.",
-    content: "Shaukat's ability to translate complex AI concepts into practical business solutions is remarkable. His work on our computer vision project exceeded all expectations."
+    name: "Waqar Ahmad",
+    position: "Development Manager at Arrow Labs FZC - LLC",
+    content: "Shaukat is an excellent resource for all challenges in development and designing. He has put his all efforts to develop a product according to the requirement. His solutions are technically strong to develop the project"
   }
 ];
 
